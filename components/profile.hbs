@@ -1,0 +1,21 @@
+<div align="center">
+    <table class="styled-table">
+            <thead>
+                <tr><th>Task</th>
+                    <th>Status</th>
+                    <th>Update / Delete</th>
+                </tr>
+            </thead>
+            {{#each this.response.data as |user|}}
+                <tbody>
+                    <tr>
+                        <td>{{user.task_name}}</td>
+                        <td>{{user.task_status}}</td>
+                        <td><button {{on "click" (fn update user.task_name)}}>Update</button>
+                        <button {{on "click" (fn delete user.task_name)}}>Delete</button></td>
+                    </tr>
+                </tbody>
+            {{/each}}
+    </table>
+</div>
+{{yield}}

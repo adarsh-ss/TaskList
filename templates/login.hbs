@@ -1,0 +1,18 @@
+{{page-title "Login"}}
+<div align="center">
+  <h align = "center">LOGIN</h>
+</div>
+
+<br>
+
+<div class="form-field" align="center">
+  <label>Username:</label>
+  {{input value=userName required=true}}
+</div>
+<div class="field" align="center">
+  <label>Password  :</label>
+  {{input value=password type="password" required=true}}
+</div>
+<div align="center">
+<div class="btn btn-primary" {{action 'login'}}>Login</div>
+</div>
